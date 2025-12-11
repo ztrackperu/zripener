@@ -40,53 +40,53 @@ class Ripener extends Controller
 
             $matriz_conversion =  (($matriz[0]-32)*5)/9 ; 
             $cadena1 = array(
-                'imei'=>"866782048942516",
+                'imei'=>"863576045638595",
                 'estado' =>0,
                 // comando para proceso integral =>command for integral process 
                 'evento' =>"command for integral process ",
-                'comando'=>"Trama_Writeout(29,1,1)"     
+                'comando'=>"CMD:Trama_Writeout(29,1,1)"     
             );
             $cadena2 = array(
-                'imei'=>"866782048942516",
+                'imei'=>"863576045638595",
                 'estado' =>0,
                 // orden de cambio para temperatura =>change order for temperature 
                 'evento' =>"change order for temperature ",
-                'comando'=>"Trama_Writeout(0,".round($matriz_conversion,2).",100)"    
+                'comando'=>"CMD:Trama_Writeout(0,".round($matriz_conversion,2).",100)"    
             );
             $cadena3 = array(
-                'imei'=>"866782048942516",
+                'imei'=>"863576045638595",
                 'estado' =>0,
                 // orden de cambio para etileno =>change order for ethylene 
                 'evento' =>"change order for ethylene  ",
-                'comando'=> "SP_ETILENO(".$matriz[1].")"
+                'comando'=> "CMD:SP_ETILENO(".$matriz[1].")"
             );
             $cadena4 = array(
-                'imei'=>"866782048942516",
+                'imei'=>"863576045638595",
                 'estado' =>0,
                 // orden para horas de inyeccion =>order for injection hours 
                 'evento' =>"order for injection hours ",
-                'comando'=>"Temporizadores(0,".$matriz[2].",".$matriz[1].")"    
+                'comando'=>"CMD:Temporizadores(0,".$matriz[2].",".$matriz[1].")"    
             );
             $cadena5 = array(
-                'imei'=>"866782048942516",
+                'imei'=>"863576045638595",
                 'estado' =>0,
                 // orden de cambio para humedad  =>change order for humidity  
                 'evento' =>"change order for humidity ",
-                'comando'=>"Trama_Writeout(4,".$matriz[3].",100)"    
+                'comando'=>"CMD:Trama_Writeout(4,".$matriz[3].",100)"    
             );
             $cadena6 = array(
-                'imei'=>"866782048942516",
+                'imei'=>"863576045638595",
                 'estado' =>0,
                 // configure AFAM PLUS
                 'evento' =>"configure AFAM PLUS ",
-                'comando'=>"Trama_Writeout(9,2,1)"      
+                'comando'=>"CMD:Trama_Writeout(9,2,1)"      
             );
             $cadena7 = array(
-                'imei'=>"866782048942516",
+                'imei'=>"863576045638595",
                 'estado' =>0,
                 // orden de cambio para CO2 =>change order for CO2
                 'evento' =>"change order for CO2",
-                'comando'=>"Trama_Writeout(3,".$matriz[4].",100)"     
+                'comando'=>"CMD:Trama_Writeout(3,".$matriz[4].",100)"     
             );
             $dataControl = $this->model->EnvioComando_libre($cadena1);
             //sleep(1);
@@ -118,75 +118,75 @@ class Ripener extends Controller
             $matriz_conversion =  (($matriz[0]-32)*5)/9 ; 
 
             $cadena1 = array(
-                'imei'=>"866782048942516",
+                'imei'=>"863576045638595",
                 //'estado' =>3,
-                'user'=>"jhonvena",
+                'user'=>"texas",
                 'tipo'=>1,
                 'dato'=>1,
                 // comando para proceso integral =>command for integral process 
                 'evento' =>"command for integral process ",
-                'comando'=>"Trama_Writeout(29,1,1)"     
+                'comando'=>"CMD:Trama_Writeout(29,1,1)"     
             );
             $cadena2 = array(
-                'imei'=>"866782048942516",
+                'imei'=>"863576045638595",
                 //'estado' =>3,
-                'user'=>"jhonvena",
+                'user'=>"texas",
                 'tipo'=>7,
                 'dato'=>round($matriz_conversion,1),
                 // orden de cambio para temperatura =>change order for temperature 
                 'evento' =>"change order for temperature ",
-                'comando'=>"Trama_Writeout(0,".round($matriz_conversion,1).",100)"    
+                'comando'=>"CMD:Trama_Writeout(0,".round($matriz_conversion,1).",100)"    
             );
             $cadena3 = array(
-                'imei'=>"866782048942516",
+                'imei'=>"863576045638595",
                 //'estado' =>3,
-                'user'=>"jhonvena",
+                'user'=>"texas",
                 'tipo'=>4,
                 'dato'=>$matriz[1],
 
                 // orden de cambio para etileno =>change order for ethylene 
                 'evento' =>"change order for ethylene  ",
-                'comando'=> "SP_ETILENO(".$matriz[1].")"
+                'comando'=> "CMD:SP_ETILENO(".$matriz[1].")"
             );
             $cadena4 = array(
-                'imei'=>"866782048942516",
+                'imei'=>"863576045638595",
                 //'estado' =>3,
-                'user'=>"jhonvena",
+                'user'=>"texas",
                 'tipo'=>5,
                 'dato'=>$matriz[2],
                 // orden para horas de inyeccion =>order for injection hours 
                 'evento' =>"order for injection hours ",
-                'comando'=>"Temporizadores(0,".$matriz[2].",".$matriz[1].")"    
+                'comando'=>"CMD:Temporizadores(0,".$matriz[2].",".$matriz[1].")"    
             );
             $cadena5 = array(
-                'imei'=>"866782048942516",
+                'imei'=>"863576045638595",
                 //'estado' =>3,
-                'user'=>"jhonvena",
+                'user'=>"texas",
                 'tipo'=>6,
                 'dato'=>$matriz[3],
                 // orden de cambio para humedad  =>change order for humidity  
                 'evento' =>"change order for humidity ",
-                'comando'=>"Trama_Writeout(4,".$matriz[3].",100)"    
+                'comando'=>"CMD:Trama_Writeout(4,".$matriz[3].",100)"    
             );
             $cadena6 = array(
-                'imei'=>"866782048942516",
+                'imei'=>"863576045638595",
                 //'estado' =>3,
-                'user'=>"jhonvena",
+                'user'=>"texas",
                 'tipo'=>12,
                 'dato'=>2,
                 // configure AFAM PLUS
                 'evento' =>"configure AFAM PLUS ",
-                'comando'=>"Trama_Writeout(9,2,1)"      
+                'comando'=>"CMD:Trama_Writeout(9,2,1)"      
             );
             $cadena7 = array(
-                'imei'=>"866782048942516",
+                'imei'=>"863576045638595",
                 //'estado' =>3,
-                'user'=>"jhonvena",
+                'user'=>"texas",
                 'tipo'=>3,
                 'dato'=>$matriz[4],
                 // orden de cambio para CO2 =>change order for CO2
                 'evento' =>"change order for CO2",
-                'comando'=>"Trama_Writeout(3,".$matriz[4].",100)"     
+                'comando'=>"CMD:Trama_Writeout(3,".$matriz[4].",100)"     
             );
             $dataControl = $this->model->EnvioComando_libre($cadena1);
             //sleep(1);

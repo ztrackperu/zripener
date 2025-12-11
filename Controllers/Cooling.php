@@ -40,7 +40,7 @@ class Cooling extends Controller
             $matriz = explode("|", $comando);
 
             $cadena1 = array(
-                'imei'=>"866782048942516",
+                'imei'=>"863576045638595",
                 'estado' =>0,
                 //verificacion de encendido => ignition check
                 'evento' =>"ignition check",
@@ -48,7 +48,7 @@ class Cooling extends Controller
 
             );
             $cadena2 = array(
-                'imei'=>"866782048942516",
+                'imei'=>"863576045638595",
                 'estado' =>0,
                 // comando para proceso integral =>command for integral process 
                 'evento' =>"command for integral process ",
@@ -70,7 +70,7 @@ class Cooling extends Controller
             $matriz = explode("|", $comando);
 /*
             $cadena1 = array(
-                'imei'=>"866782048942516",
+                'imei'=>"863576045638595",
                 'estado' =>0,
                 //verificacion de encendido => ignition check
                 'evento' =>"ignition check",
@@ -79,11 +79,11 @@ class Cooling extends Controller
 
             */
             $cadena2 = array(
-                'imei'=>"866782048942516",
+                'imei'=>"863576045638595",
                 'estado' =>0,
                 // comando para proceso integral =>command for integral process 
                 'evento' =>"command for integral process ",
-                'comando'=>"modo_cooling(".$matriz[0].",".$matriz[1].")"    
+                'comando'=>"CMD:modo_cooling(".$matriz[0].",".$matriz[1].")"    
             );
 
            // $dataControl = $this->model->EnvioComando_libre($cadena1);

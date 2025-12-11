@@ -70,7 +70,7 @@ class Control extends Controller
         if($param!=""){
                 $comando1 = $param;
                 $comando = explode("|", $comando1);;
-                $coman ="Temporizadores(0,".$comando[0].",".$comando[1].")";
+                $coman ="CMD:Temporizadores(0,".$comando[0].",".$comando[1].")";
                 $event ="is being programmed to ".$comando[0]." hours";
                 $dato=$comando[0];
                 $tipo =5 ;
@@ -97,7 +97,7 @@ class Control extends Controller
         $dataControl="";
         if($param!=""){
                 $comando = $param;
-                $coman ="Trama_Writeout(21,0,0)";
+                $coman ="CMD:Trama_Writeout(21,0,0)";
                 $event =" ACTIVE DEFROST MODE";
                 $dato=0;
                 $tipo =0 ;
@@ -132,7 +132,7 @@ class Control extends Controller
                     'tipo'=>12,
                     'dato'=>0,
                     'evento' =>$event,
-                    'comando'=>"Trama_Writeout(9,0,1)"      
+                    'comando'=>"CMD:Trama_Writeout(9,0,1)"      
                 );
                 $dataControl =  $this->model->EnvioComando($cadena);
             }else{
@@ -144,7 +144,7 @@ class Control extends Controller
                     'tipo'=>12,
                     'dato'=>1,
                     'evento' =>"ACTIVATE VENTILATION",
-                    'comando'=>"Trama_Writeout(9,1,1)"      
+                    'comando'=>"CMD:Trama_Writeout(9,1,1)"      
                 );
                 $cadena1 = array(
                     'imei'=>"863576045638595",
@@ -153,7 +153,7 @@ class Control extends Controller
                     'tipo'=>9,
                     'dato'=>200,
                     'evento' =>$event,
-                    'comando'=>"Trama_Writeout(5,200,1)"      
+                    'comando'=>"CMD:Trama_Writeout(5,200,1)"      
                 );
                 $dataControl1 =  $this->model->EnvioComando($cadena);
                 sleep(1);
@@ -201,7 +201,7 @@ class Control extends Controller
         if($param!=""){
         $comando = $param;
         $matriz = explode("|", $comando);
-        $coman = "Trama_Writeout(3,".$comando.",100)";
+        $coman = "CMD:Trama_Writeout(3,".$comando.",100)";
         $event ="co2 limit level change to ".$comando." %";
         $dato=$comando;
         $tipo =3 ;
@@ -212,7 +212,7 @@ class Control extends Controller
             'tipo'=>12,
             'dato'=>2,
             'evento' =>"activating afamplus process",
-            'comando'=>"Trama_Writeout(9,2,1)"    
+            'comando'=>"CMD:Trama_Writeout(9,2,1)"    
         );
         $cadena2 = array(
             'imei'=>"863576045638595",
@@ -238,7 +238,7 @@ class Control extends Controller
         $dataControl="";
         if($param!=""){
                 $comando = $param;
-                $coman = "SP_ETILENO(".$comando .")";
+                $coman = "CMD:SP_ETILENO(".$comando .")";
                 $event ="ethylene level change to ".$comando." ppm";
                 $dato=$comando;
                 $tipo =4 ;
@@ -265,12 +265,12 @@ class Control extends Controller
         if($param!=""){
             $comando = $param;
             if($comando=="ON"){
-                $coman = "Trama_Writeout(29,1,1)";
+                $coman = "CMD:Trama_Writeout(29,1,1)";
                 $event ="turn on the reefer machine";
                 $dato=1;
                 $tipo =1 ;
             }else {
-                $coman = "Trama_Writeout(29,0,1)";
+                $coman = "CMD:Trama_Writeout(29,0,1)";
                 $event ="reefer machine shutdown";
                 $dato=0;
                 $tipo =2 ;

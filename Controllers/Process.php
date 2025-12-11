@@ -40,19 +40,19 @@ class Process extends Controller
             $matriz = explode("|", $comando);
 
             $cadena1 = array(
-                'imei'=>"866782048942516",
+                'imei'=>"863576045638595",
                 'estado' =>0,
                 //verificacion de encendido => ignition check
                 'evento' =>"ignition check",
-                'comando'=>"RELE3_ON"   
+                'comando'=>"CMD:RELE3_ON"   
 
             );
             $cadena2 = array(
-                'imei'=>"866782048942516",
+                'imei'=>"863576045638595",
                 'estado' =>0,
                 // comando para proceso integral =>command for integral process 
                 'evento' =>"command for integral process ",
-                'comando'=>"TEMPO_PROCESO(".$matriz[0].",".$matriz[1].",".$matriz[2].",".$matriz[3].",".$matriz[4].")"    
+                'comando'=>"CMD:TEMPO_PROCESO(".$matriz[0].",".$matriz[1].",".$matriz[2].",".$matriz[3].",".$matriz[4].")"    
             );
 
             $dataControl = $this->model->EnvioComando_libre($cadena1);
@@ -70,14 +70,14 @@ class Process extends Controller
             $matriz = explode("|", $comando);
 
             $cadena1 = array(
-                'imei'=>"866782048942516",
+                'imei'=>"863576045638595",
                 //'estado' =>0,
                 //verificacion de encendido => ignition check
                 'evento' =>"ignition check",
-                'comando'=>"RELE3_ON"     
+                'comando'=>"CMD:RELE3_ON"     
             );
             $cadena2 = array(
-                'imei'=>"866782048942516",
+                'imei'=>"863576045638595",
                 //'estado' =>0,
                 // comando para proceso integral =>command for integral process 
                 'evento' =>"command for integral process ",
