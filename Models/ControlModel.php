@@ -29,7 +29,7 @@ class ControlModel extends Query{
     {
         $ch = curl_init();
         $data =json_encode($data);
-        curl_setopt($ch, CURLOPT_URL, "http://161.132.53.51:9050/Comandos/");
+        curl_setopt($ch, CURLOPT_URL, "http://161.132.53.51:9050/Comandos/texas");
         curl_setopt($ch, CURLOPT_POSTFIELDS, $data);
         curl_setopt($ch, CURLOPT_HTTPHEADER, array('Content-Type:application/json'));
         curl_setopt($ch, CURLOPT_RETURNTRANSFER, true);
@@ -42,7 +42,7 @@ class ControlModel extends Query{
     {
         $ch = curl_init();
         $data =json_encode($data);
-        curl_setopt($ch, CURLOPT_URL, "http://161.132.53.51:9050/Comandos/libre/");
+        curl_setopt($ch, CURLOPT_URL, "http://161.132.53.51:9050/Comandos/libretexas/");
         curl_setopt($ch, CURLOPT_POSTFIELDS, $data);
         curl_setopt($ch, CURLOPT_HTTPHEADER, array('Content-Type:application/json'));
         curl_setopt($ch, CURLOPT_RETURNTRANSFER, true);
